@@ -1,1 +1,14 @@
+# Git Update
+name: randomwiki
+parent: default
 
+- trigger: ":rwiki"
+    force_clipboard: true
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - python
+            - C:\Users\%USERNAME%\...\random-gen.py
